@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Gluten:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gluten", cursive;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  line-height: 1.7;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: inline-flex;
+  height: 100vh;
+  overflow: hidden;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+  cursor: grab;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+  user-select: none;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 65%;
+  margin-bottom: 0.8rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.slide h4 {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.2rem;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  background-color: #444;
+}
+
+.grabbing {
+  cursor: grabbing;
+}
+
+.grabbing .slide img {
+  transform: scale(0.9);
+}
